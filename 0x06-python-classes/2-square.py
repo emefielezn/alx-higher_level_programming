@@ -13,15 +13,8 @@ class Square:
         Args:
         size: size for __size attribute of class instance
         """
-        self.__size =size
-        dsizeint = int(self.__size)
-        try:
-            if size != dsizeint:
-                raise TypeError
-        except TypeError:
-            print("size must be an integer")
-        try:
-            if __size < 0:
-                raise ValueError
-        except ValueError:
-            print ("size must be >= 0")
+        self.__size =size  
+            if not (isinstance(self.__size, int)):
+                raise TypeError("size must be an integer")
+            if self. __size < 0:
+                raise ValueError("size must be >= 0")
