@@ -49,16 +49,23 @@ class Rectangle:
             return ((self.__width + self.__height) * 2)
 
     def __str__(self):
-        """Returns the string representation of the class instance"""
-        stringrep = ""
+        """ print() __str__ method funtion to return rectangle in char '#'
+        """
+        res = ""
         if self.__width == 0 or self.__height == 0:
-            return stringrep
-        for row in range(self.__height):
-            for column in range(self.__width):
-                stringrep += "#"
-        return stringrep
+            return res
+        for i in range(self.__height):
+            if i == self.__height - 1:
+                res += ('#' * self.__width)
+            else:
+                res += (('#' * self.__width) + '\n')
+                return res
 
     def __repr__(self):
-        """Returns the string representation of the class instance for
-        recreation"""
-        return eval(repr("Rectangle ({:d}, {:d})".format(self.__width, self.__height)))
+        """ print() or eval() __repr__ method function to return
+        Rectangle(width, height)
+        """
+        w = str(self.__width)
+        h = str(self.__height)
+        res = "Rectangle(" + w + ", " + h + ")"
+        return res
