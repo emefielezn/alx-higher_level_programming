@@ -50,10 +50,12 @@ class Rectangle:
 
     def __str__(self):
         """Returns the string representation of the class instance"""
-        if self.__width == 0 or self.__height == 0:
-            print ("")
-            return
+        stringrep=""
+        if sielf.__width == 0 or self.__height == 0:
+            return stringrep
         for row in range(self.__height):
             for column in range(self.__width):
-                print ('#', end="")
-                print ()
+                stringrep +="#"
+                if row < self.__height - 1:
+                    stringrep += "\n"
+                    print (str(stringrep), end="")            
