@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module creates a class named Rectangle"""
 
+
 class Rectangle:
     """A class named Rectangle
     Attributes:
@@ -15,6 +16,7 @@ class Rectangle:
     def width(self):
         """Gets the width of the class instance"""
         return self.__width
+    
     @width.setter
     def width(self, value):
         """Sets the width of the class instance"""
@@ -28,6 +30,7 @@ class Rectangle:
     def height(self):
         """Gets the height of the class instance"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Sets the height of the class instance"""
@@ -54,12 +57,13 @@ class Rectangle:
         res = ""
         if self.__width == 0 or self.__height == 0:
             return res
-        for i in range(self.__height):
-            if i == self.__height - 1:
-                res += ('#' * self.__width)
-            else:
-                res += (('#' * self.__width) + '\n')
-                return res
+        for j in range(self.__width):
+            for i in range(self.__height):
+                if i == self.__height - 1:
+                    res += ('#' * self.__width)
+                else:
+                    res += (('#' * self.__width) + '\n')
+                    return res
 
     def __repr__(self):
         """ print() or eval() __repr__ method function to return

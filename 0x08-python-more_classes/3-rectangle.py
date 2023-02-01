@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module creates a class named Rectangle"""
 
+
 class Rectangle:
     """A class named Rectangle
     Attributes:
@@ -15,6 +16,7 @@ class Rectangle:
     def width(self):
         """Gets the width of the class instance"""
         return self.__width
+    
     @width.setter
     def width(self, value):
         """Sets the width of the class instance"""
@@ -28,6 +30,7 @@ class Rectangle:
     def height(self):
         """Gets the height of the class instance"""
         return self.__height
+    
     @height.setter
     def height(self, value):
         """Sets the height of the class instance"""
