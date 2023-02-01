@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """This module defines the text_indentation function
-
 """
+
+
 def text_indentation(text):
     """ Function that prints indented text.
     Args:
@@ -20,7 +21,7 @@ def text_indentation(text):
         if i not in "?:.":
             newstring += i
         else:
-            string += i
+            newstring += i
             print(newstring.strip())
             print()
             flag = 1
