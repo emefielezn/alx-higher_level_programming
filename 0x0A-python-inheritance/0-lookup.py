@@ -2,6 +2,6 @@
 """This module defines a lookup function"""
 
 
-def loopup(obj):
+def lookup(obj):
     """returns a valid list of attributes of the object"""
     return lookup(dir(obj))
