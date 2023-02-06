@@ -4,4 +4,4 @@
 
 def loopup(obj):
     """returns a valid list of attributes of the object"""
-    return dir(obj)
+    return lookup(dir(obj))
