@@ -7,6 +7,8 @@ class BaseGeometry:
     Attributes:
     attr1(area): Raises an exception
     """
+
     def area(self):
         """Raises an exception"""
+
         raise exception("area() is not implemented")
