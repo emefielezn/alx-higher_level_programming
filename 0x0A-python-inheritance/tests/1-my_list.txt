@@ -1,138 +1,138 @@
 This doctest checks a script that creates Mylist class
 import the module
->>> MyList = __import__('1-my_list').MyList
+>>>MyList = __import__('1-my_list').MyList
 
 check print_sored with empty list
->>> my_list = MyList()
->>> my_list.print_sorted()
+>>>my_list = MyList()
+>>>my_list.print_sorted()
 []
 
 check that object can be created
->>> my_list = MyList()
->>> my_list
+>>>my_list = MyList()
+>>>my_list
 []
 
 check that my_list is only executed with zero argm
->>> my_list = MyList(5)
+>>>my_list = MyList(5)
 Traceback (most recent call last):
 TypeError: 'int' object is not iterable
 
 
 check that list printed correctly
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> print(my_list)
+>>>my_list = MyList()
+>>>my_list.append(1)
+>>>my_list.append(4)
+>>>my_list.append(2)
+>>>my_list.append(3)
+>>>my_list.append(5)
+>>>print(my_list)
 [1 4 2 3 5]
 
 check that sorted list print correctly
->>> my_list.print_sorted()
+>>>my_list.print_sorted()
 [1 2 3 4 5]
 
 
 check that list is unmodified after print_sorted call
->>> print(my_list)
+>>>print(my_list)
 [1 4 2 3 5]
 
 check that pre sorted list is printed correctly
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(2)
->>> my_list.append(3)
->>> print(my_list)
+>>>my_list = MyList()
+>>>my_list.append(1)
+>>>my_list.append(2)
+>>>my_list.append(3)
+>>>print(my_list)
 [1 2 3]
 
 
 check that negative numbers may be added to list
->>> my_list = MyList()
->>> my_list.append(-1)
->>> my_list.append(-4)
->>> my_list.append(-2)
->>> my_list.append(-3)
->>> my_list.append(-5)
->>> print(my_list)
+>>>my_list = MyList()
+>>>my_list.append(-1)
+>>>my_list.append(-4)
+>>>my_list.append(-2)
+>>>my_list.append(-3)
+>>>my_list.append(-5)
+>>>print(my_list)
 [-1 -4 -2 -3 -5]
 
 
 check that sorted list may be printed
->>> my_list.print_sorted()
+>>>my_list.print_sorted()
 [-5 -4 -3 -2 -1]
 
 
 check that you can print empty list
->>> my_list = MyList()
->>> print(my_list)
+>>>my_list = MyList()
+>>>print(my_list)
 []
 
 
 check that no arguments are passed to print_sorted
->>> my_list.print_sorted(1)
+>>>my_list.print_sorted(1)
 Traceback (most recent call last):
 TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 
 check that my_list.append() take only 1 argument
->>> my_list.append()
+>>>my_list.append()
 Traceback (most recent call last):
 TypeError: append() takes only 1 argument but 0 given
 
 
 check that passing in none throw an error
->>> my_list = MyList(None)
+>>>my_list = MyList(None)
 Traceback (most recent calll last):
 TypeError: 'NoneType' object is not iterable
 
 
 check that passing in more than one list throws an error
->>> my_list = MyList([1, 2], [3, 4])
+>>>my_list = MyList([1, 2], [3, 4])
 Traceback (most recent call last):
 TypeError: list() takes at only 1 argument but 2 given
 
 
 check that the list is of the class
->>> my_list = MyList()
->>> type(my_list)
+>>>my_list = MyList()
+>>>type(my_list)
 <class '1-my_list.Mylist'>
 
 
 check that changing an element in object works
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list[0] = (2)
->>> print(my_list)
+>>>my_list = MyList()
+>>>my_list.append(1)
+>>>my_list[0] = (2)
+>>>print(my_list)
 [2]
 
 
 check that remove an element in object works
->>> my_list = MyList(0
->>> my_list.apppend(1)
->>> my_list.remove(1)
->>> print(my_list)
+>>>my_list = MyList(0
+>>>my_list.apppend(1)
+>>>my_list.remove(1)
+>>>print(my_list)
 []
 
 
 chech that add string works
->>> my_list = MyList()
->>> my_list.append ("hello")
->>> print(my_list)
+>>>my_list = MyList()
+>>>my_list.append ("hello")
+>>>print(my_list)
 ['hello']
 
 
 check that add string and integer works
->>> my_list = MyList()
->>> my_list.append("hello")
->>> my_list.append(7)
->>> print(my_list)
+>>>my_list = MyList()
+>>>my_list.append("hello")
+>>>my_list.append(7)
+>>>print(my_list)
 ['hello', 7]
 
 
 chech that print sorted list of string and integer throw error
->>> my_list = MyList()
->>> my_list.append("hello")
->>> my_list.append(7)
->>> my_list.print_sorted()
+>>>my_list = MyList()
+>>>my_list.append("hello")
+>>>my_list.append(7)
+>>>my_list.print_sorted()
 Traceback (most recent call last):
 TypeError: unorderable types int() <  str()
