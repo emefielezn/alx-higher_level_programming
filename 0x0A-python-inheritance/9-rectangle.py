@@ -2,6 +2,8 @@
 """This module create a Rectangle class"""
 
 
+BaeGeometry = __import__('7-base_geometry.py').BaseGeometry
+
 class Rectangle(BaseGeometry):
     """A class named Rectangle
     Attributes:
