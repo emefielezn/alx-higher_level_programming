@@ -7,8 +7,6 @@ class MyList(list):
     Attributes:
     attr1(print_sorted): prints sorted list
     """
-
     def print_sorted(self):
         """prints instance"""
-
         print(sorted(self))
