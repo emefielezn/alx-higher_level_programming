@@ -1,0 +1,1 @@
+project javascript onjects scopes and closures
